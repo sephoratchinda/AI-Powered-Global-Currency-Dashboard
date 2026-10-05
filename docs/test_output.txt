@@ -1,0 +1,22 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.8, pytest-9.1.1, pluggy-1.6.0 -- C:\MY PROJECTS\AI-Powered Global Currency Dashboard\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\MY PROJECTS\AI-Powered Global Currency Dashboard
+plugins: anyio-4.15.1
+collecting ... collected 7 items
+
+tests/test_core.py::test_pct_change PASSED                               [ 14%]
+tests/test_core.py::test_volatility_zero_for_flat_series PASSED          [ 28%]
+tests/test_core.py::test_volatility_positive_and_labels PASSED           [ 42%]
+tests/test_core.py::test_sentiment_scoring PASSED                        [ 57%]
+tests/test_core.py::test_forecast_shape_and_bands PASSED                 [ 71%]
+tests/test_core.py::test_forecast_needs_history PASSED                   [ 85%]
+tests/test_core.py::test_api_validation PASSED                           [100%]
+
+============================== warnings summary ===============================
+venv\Lib\site-packages\starlette\testclient.py:40
+  C:\MY PROJECTS\AI-Powered Global Currency Dashboard\venv\Lib\site-packages\starlette\testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 7 passed, 1 warning in 7.49s =========================
