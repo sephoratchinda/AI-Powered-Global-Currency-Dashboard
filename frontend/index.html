@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Global Currency Intelligence Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="style.css"></head><body>
+<header><h1>💱 AI Global Currency Intelligence Dashboard</h1>
+<div class="row"><span class="badge" id="st">Loading…</span><label>Base <select id="base"></select></label></div></header>
+<main>
+<section class="c w12"><h2>Live exchange rates <small>(ECB reference rates via Frankfurter · click a card to chart it)</small></h2><div class="cards" id="cards"></div></section>
+<section class="c w8"><div class="row sp"><h2 id="ct">Chart</h2><div class="row"><select id="from"></select>→<select id="to"></select><span id="tf"></span></div></div>
+<div class="cv"><canvas id="chart"></canvas></div></section>
+<section class="c w4"><h2>Currency converter</h2>
+<div class="row"><input id="amt" type="number" value="100" min="0"><select id="cf"></select></div>
+<div class="row" style="margin:8px 0"><button id="sw">⇅ Swap</button><select id="ctt"></select></div>
+<div class="big" id="cout">—</div><small id="crate"></small></section>
+<section class="c w6"><h2>Daily gain / loss <small id="glp"></small></h2><div class="cv sm"><canvas id="gl"></canvas></div></section>
+<section class="c w6"><h2>Volatility &amp; AI forecast</h2>
+<div class="row" style="gap:28px"><div><small>Annualised volatility</small><div class="big" id="vol">—</div><small id="vl"></small></div>
+<div><small>Forecast (last day of horizon)</small><div class="big" id="fc">—</div><small id="fd"></small></div></div>
+<table class="mt" id="mt"></table><p><small id="fm"></small></p></section>
+<section class="c w7"><h2>Currency strength heatmap <small>(30-day % change, row vs column)</small></h2><div class="hm" id="hm"></div><small id="rank"></small></section>
+<section class="c w5"><h2>Alerts</h2>
+<div class="row"><select id="ap"></select><select id="ad"><option>above</option><option>below</option></select><input id="av" type="number" step="any" style="width:90px"><button class="p" id="aa">Add</button></div>
+<ul id="al"></ul><small>Significant daily moves (&gt;1%):</small><ul id="auto"></ul></section>
+<section class="c w12"><h2>FX news sentiment <small id="src"></small></h2><b id="sent"></b><ul id="news"></ul></section>
+</main><div id="toast"></div><script src="app.js"></script></body></html>

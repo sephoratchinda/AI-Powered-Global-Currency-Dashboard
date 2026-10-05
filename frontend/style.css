@@ -1,0 +1,20 @@
+:root{--bg:#f4f6fa;--card:#fff;--tx:#152033;--mu:#66748b;--bd:#e0e5ee;--ac:#2563eb;--up:#0f9d58;--dn:#d93025}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1420;--card:#152033;--tx:#e8edf5;--mu:#93a1b8;--bd:#25324a;--ac:#5b8def;--up:#3ddc84;--dn:#ff6b5e}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,sans-serif}
+header{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:14px 18px;background:var(--card);border-bottom:1px solid var(--bd)}
+h1{font-size:18px;margin:0}h2{font-size:14px;margin:0 0 10px}small,.mu{color:var(--mu);font-size:12px;font-weight:400}
+main{max-width:1250px;margin:auto;padding:14px;display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px;grid-column:span 12;min-width:0}
+@media(min-width:900px){.w4{grid-column:span 4}.w5{grid-column:span 5}.w6{grid-column:span 6}.w7{grid-column:span 7}.w8{grid-column:span 8}}
+select,input,button{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:7px 9px}
+button{cursor:pointer}button.on,button.p{background:var(--ac);color:#fff;border-color:var(--ac)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.sp{justify-content:space-between}
+.badge{font-size:12px;padding:3px 10px;border-radius:99px;border:1px solid var(--bd);color:var(--mu)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(135px,1fr));gap:8px}
+.rc{border:1px solid var(--bd);border-radius:10px;padding:9px;cursor:pointer}.rc:hover{border-color:var(--ac)}.rc b{font-size:12px;color:var(--mu)}.rc div{font-size:17px;font-weight:600}
+.up{color:var(--up)}.dn{color:var(--dn)}.big{font-size:26px;font-weight:700}
+.cv{position:relative;height:280px}.cv.sm{height:190px}
+.hm{overflow-x:auto}table{border-collapse:collapse;font-size:11px}td,th{padding:5px 6px;text-align:center;min-width:44px}
+.mt{margin-top:10px;width:100%}.mt td,.mt th{text-align:left;border-bottom:1px solid var(--bd)}
+ul{margin:6px 0;padding-left:18px}
+#toast{position:fixed;right:12px;bottom:12px;background:var(--ac);color:#fff;padding:10px 14px;border-radius:10px;display:none;max-width:80vw;z-index:9}
